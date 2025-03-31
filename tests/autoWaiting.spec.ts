@@ -29,13 +29,13 @@ test("Auto waiting", async ({ page }) => {
 test("Alternative waits", async ({ page }) => {
     const successButton = page.locator(".bg-success");
     // Wait for element
-    // await page.waitForSelector(".bg-success");
+    await page.waitForSelector(".bg-success");
 
     //wait for response
-    // await page.waitForResponse("http://uitestingplayground.com/ajaxdata");
+    await page.waitForResponse("http://uitestingplayground.com/ajaxdata");
 
     //wait for network calls to be completed (NOT RECOMMENDED)
-    //await page.waitForLoadState("networkidle");
+    await page.waitForLoadState("networkidle");
 
     const text = await successButton.allInnerTexts();
     expect(text).toContain("Data loaded with AJAX get request.");

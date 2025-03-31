@@ -24,8 +24,8 @@ export default defineConfig<TestOptions>({
     },
 
     use: {
-        actionTimeout: 10_000,
-        navigationTimeout: 10_000,
+        actionTimeout: 20_000,
+        navigationTimeout: 20_000,
         trace: "on-first-retry",
         headless: true,
         video: "off",

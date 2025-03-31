@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "pageObjects-chrome": "npx playwright test usePageObject.spec.ts --project=chromium",
+        "pageObjects-chrome": "npx playwright test autoWaiting.spec.ts --project=chromium",
         "pageObjects-firefox": "npx playwright test usePageObject.spec.ts --project=firefox",
         "pageObjects-all": "npm run pageObjects-chrome & npm run pageObjects-firefox",
         "autoWaiting-all": "URL=http://uitestingplayground.com/ajax npx playwright test autoWaiting.spec.ts --project=chromium",
