@@ -1,0 +1,12 @@
+services:
+    playwright-test:
+        image: playwright-test
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        command: npm run all
+        volumes:
+            - ./playwright-report/:/app/playwright-report
+            - ./test-results/:/app/test-results

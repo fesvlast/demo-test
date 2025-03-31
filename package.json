@@ -1,0 +1,27 @@
+{
+    "name": "demo-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "pageObjects-chrome": "npx playwright test usePageObject.spec.ts --project=chromium",
+        "pageObjects-firefox": "npx playwright test usePageObject.spec.ts --project=firefox",
+        "pageObjects-all": "npm run pageObjects-chrome & npm run pageObjects-firefox",
+        "autoWaiting-all": "URL=http://uitestingplayground.com/ajax npx playwright test autoWaiting.spec.ts --project=chromium",
+        "allure generate": "allure generate ./allure-results -o ./allure-report --clean",
+        "allure serve": "allure serve",
+        "pageObjects-docker": "npx playwright test --project=dev-docker",
+        "all": "npx playwright test --project=docker-all"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "@faker-js/faker": "^9.6.0",
+        "@playwright/test": "^1.51.1",
+        "@types/node": "^22.13.13",
+        "allure-playwright": "^3.2.1",
+        "dotenv": "^16.4.7"
+    }
+}
